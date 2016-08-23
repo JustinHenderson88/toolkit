@@ -4,7 +4,7 @@
 
 #remove undesired PCI SSID's
 
-undesiredNetwork="PCI Computers"
+undesiredNetwork="Enter desired SSID"
 wifiOrAirport=$(/usr/sbin/networksetup -listallnetworkservices | grep -Ei '(Wi-Fi|AirPort)')
 echo $wifiOrAirport
 wirelessDevice=$(networksetup -listallhardwareports | awk "/$wifiOrAirport/,/Device/" | awk 'NR==2' | cut -d " " -f 2)
